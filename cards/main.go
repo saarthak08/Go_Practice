@@ -1,8 +1,6 @@
 package main //main packages are executable. All others are reusable type of packages.
 
-import (
-	"fmt" //imports other packages. Here 'fmt' package is imported.
-)
+//"fmt" //imports other packages. Here 'fmt' package is imported.
 
 func main() {
 	//var card string ="Ace of Spades"  First way of variable decalaration
@@ -11,15 +9,11 @@ func main() {
 
 	//card = "Five of Diamonds"  Value assigning after declaration
 
-	card := newCard()
+	//card := newCard()
 
-	cards := deck{"Ace of Diamonds", newCard()}
-	cards = append(cards, "Ace of Spades")
+	cards := newDeck()
 
-	for i, tempCard := range cards {
-		fmt.Println(i, tempCard)
-	}
-	fmt.Println(card)
+	cards.print()
 
 }
 
